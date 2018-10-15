@@ -1,0 +1,9 @@
+package com.accolite;
+
+public enum Color {
+	RED, GREEN, BLUE;
+	public static void main(String[] args) {
+		Color cl = Color.BLUE;
+		System.out.println(cl);
+	}
+}

@@ -1,0 +1,141 @@
+package com.anuj.hackerrank;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+/*5 5
+1 5 5 25 125*/
+public class FindGP {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+		int r = sc.nextInt();
+		List<Long> list = new ArrayList<Long>();
+		long[] input = new long[n];
+		for (int i = 0; i < n; i++) {
+			long data = sc.nextLong();
+			list.add(data);
+			input[i] = data;
+			
+		}
+
+		System.out.println(countTriplets(input, r));
+		//System.out.println(solve(list, r));
+
+		sc.close();
+	}
+
+	static long countTriplets(long[] arr, long r) {
+		long cnt = 0;
+		Map<Long, Long> map = new HashMap<>();
+		Map<Long, Long> rMap = new HashMap<>();
+		for (long n : arr) {
+			if (n % r == 0) {
+				long pre = n / r;
+				Long cnt2 = rMap.get(pre);
+				if (cnt2 != null)
+					cnt += cnt2;
+
+				Long cnt1 = map.get(pre);
+				if (cnt1 != null)
+					rMap.put(n, rMap.getOrDefault(n, 0L) + cnt1);
+			}
+			map.put(n, map.getOrDefault(n, 0L) + 1);
+		}
+		return cnt;
+	}
+
+	static long solve(List<Long> arr, long r) {
+		Map<Long, List<Long>> numberToIndices = new HashMap<>();
+		for (long l : arr) {
+			if (!numberToIndices.containsKey(l)) {
+				numberToIndices.put(l, new ArrayList<>());
+			}
+
+			numberToIndices.get(l).add((long) arr.indexOf(l));
+		}
+
+		long result = 0;
+		for (long l : arr) {
+			if (l % r != 0) {
+				continue;
+			}
+
+			long firstNumber = l / r;
+
+			if ((long) l * r > Long.MAX_VALUE) {
+				continue;
+			}
+
+			long lastNumber = l * r;
+
+			result += (long) findBeforeCount(numberToIndices, firstNumber, arr.indexOf(l))
+					* findAfterCount(numberToIndices, lastNumber, arr.indexOf(l));
+		}
+		return result;
+	}
+
+	static int findBeforeCount(Map<Long, List<Long>> numberToIndices, long number, long index) {
+		if (!numberToIndices.containsKey(number)) {
+			return 0;
+		}
+
+		List<Long> indices = numberToIndices.get(number);
+		int position = Collections.binarySearch(indices, index);
+		if (position < 0) {
+			position = -1 - position;
+		}
+
+		return position;
+	}
+
+	static int findAfterCount(Map<Long, List<Long>> numberToIndices, Long number, long index) {
+		if (!numberToIndices.containsKey(number)) {
+			return 0;
+		}
+
+		List<Long> indices = numberToIndices.get(number);
+		int position = Collections.binarySearch(indices, index);
+		if (position < 0) {
+			position = -1 - position - 1;
+		}
+
+		return indices.size() - 1 - position;
+	}
+	/*
+	 * 
+	 * static long countTriplets(List<Long> arr, long r) { long count = 0;
+	 * Map<Long, Long> map = new HashMap<Long, Long>(); Set<Long> set = new
+	 * LinkedHashSet(arr);
+	 * 
+	 * for (Long l : arr) { if (map.containsKey(l)) { map.put(l, map.get(l) +
+	 * 1); } else { map.put(l, 1L); } }
+	 * 
+	 * if(r == 1 ){ for(Long s: map.values()){ long size = s; for(long i = size;
+	 * i >= r; i--) count += (i - r)*(i - (r+1))/(2); } // return count; } else{
+	 * for (Long l : set) { long pre = count; if (set.contains(l * r) &&
+	 * set.contains(l * r * r)) { count += map.get(l * r) * map.get(l * r * r);
+	 * if(pre > count){ System.out.println(":" + pre); } } map.put(l, map.get(l)
+	 * - 1);
+	 * 
+	 * } } return count; }
+	 * 
+	 * public static void main(String[] args) throws IOException { Scanner scan
+	 * = new Scanner(System.in); while (true) { int items = scan.nextInt(); int
+	 * gp = scan.nextInt(); List<Long> inputs = new ArrayList<Long>();
+	 * 
+	 * for (int i = 0; i < items; i++) { inputs.add(scan.nextLong()); }
+	 * 
+	 * long result = countTriplets(inputs, gp); System.out.println(result); }
+	 * 
+	 * }
+	 */
+
+}

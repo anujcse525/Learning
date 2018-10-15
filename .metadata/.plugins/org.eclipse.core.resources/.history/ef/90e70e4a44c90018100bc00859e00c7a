@@ -1,0 +1,36 @@
+package com.anuj.hackerrank;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class FindGP {
+
+	static long countTriplets(List<Long> list, long r) {
+		long count = 0;
+		for (long l : list) {
+			if (list.contains(r * l) && list.contains(r * l * l)) {
+				//list.
+				++count;
+			}
+		}
+		return count;
+	}
+
+	public static void main(String[] args) throws IOException {
+		Scanner scan = new Scanner(System.in);
+		int items = scan.nextInt();
+		int gp = scan.nextInt();
+		List<Long> inputs = new ArrayList<Long>();
+		scan.wait();
+		for (int i = 0; i < items; i++) {
+			inputs.add(scan.nextLong());
+		}
+
+		long result = countTriplets(inputs, gp);
+		System.out.println(result);
+		scan.close();
+	}
+
+}

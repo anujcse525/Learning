@@ -1,0 +1,15 @@
+package spring.tutorial.arraytypespringdi;
+
+public class Engine {
+	String[] models;
+
+	public String[] getModels() {
+		return models;
+	}
+
+	public void setModels(String[] models) {
+		this.models = models;
+	}
+	
+	
+}

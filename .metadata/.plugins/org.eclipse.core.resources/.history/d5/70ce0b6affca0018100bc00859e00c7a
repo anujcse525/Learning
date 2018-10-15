@@ -1,0 +1,12 @@
+package com.anuj.perfios;
+
+public class DiceArithmetic {
+
+	public static void main(String[] args) {
+		if(args.length < 2){
+			System.out.println("Usage diceRoller <NumberOfDice>D<NumberOfSides> <NumberOfDice>D<NumberOfSides>");
+		}
+		System.out.println(args[0] + " " + args[1]);
+	}
+
+}

@@ -1,0 +1,39 @@
+package com.anuj.hackerrank;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Matrix {
+
+	static int countDistinct(List<List<Integer>> matrix) {
+		Set<Integer> set = new HashSet<Integer>();
+		for (List<Integer> list : matrix) {
+			int min = Integer.MAX_VALUE;
+			int max = Integer.MIN_VALUE;
+			boolean minFlag = false, maxFlag = false;
+			for (int temp : list) {
+				if(temp == min)temp == max){
+					return -1;
+				}
+				if (temp < min ) {
+					min = temp;
+				}
+				if(temp > max){
+					max = temp;
+				}
+				
+			}
+			set.add(min);
+			set.add(max);
+		}
+		for()
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package spring.tutorial.arraytypespringdi;
+
+public class Car {
+
+	String carCompany;
+	Engine engine;
+
+	public String getCarCompany() {
+		return carCompany;
+	}
+
+	public void setCarCompany(String carCompany) {
+		this.carCompany = carCompany;
+	}
+
+	public Engine getEngine() {
+		return engine;
+	}
+
+	public void setEngine(Engine engine) {
+		this.engine = engine;
+	}
+
+	@Override
+	public String toString() {
+		return "Car [carCompany=" + carCompany + ", engine=" + engine + "]";
+	}
+	
+}

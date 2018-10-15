@@ -1,0 +1,9 @@
+package com.accolite;
+
+public class NestedInner {
+class Inner{
+	public void show(){
+		System.out.println("Nested Class caled");
+	}
+}
+}

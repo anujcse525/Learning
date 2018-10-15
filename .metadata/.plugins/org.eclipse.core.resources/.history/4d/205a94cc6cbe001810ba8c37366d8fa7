@@ -1,0 +1,41 @@
+package spring.tutorial.SpringLearning;
+
+public class Test {
+	private String messae;
+	private String name;
+	private int age;
+
+	public int getAge() {
+		return age;
+	}
+
+	public void setAge(int age) {
+		this.age = age;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	private Test(String name, int age) {
+		this.name = name;
+		this.age = age;
+		System.out.println("Test Constructor called...");
+	}
+
+	public void getMessage() {
+		System.out.println("Your message: " + messae);
+	}
+
+	public void setmessage(String messa) {
+		this.messae = messa;
+	}
+
+	public void hello(String message) {
+		System.out.println("Hello Spring : " + message);
+	}
+}

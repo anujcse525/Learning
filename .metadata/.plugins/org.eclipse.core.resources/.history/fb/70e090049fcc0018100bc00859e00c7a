@@ -1,0 +1,17 @@
+package com.anuj.hackerrank;
+
+public class StringReverseWithoutExtraVariable {
+
+	static String reverse(String str){
+		int start = 0;
+		int end = str.length();
+		while(start < end){
+			str.toCharArray()[start] = str.toCharArray()[end];
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

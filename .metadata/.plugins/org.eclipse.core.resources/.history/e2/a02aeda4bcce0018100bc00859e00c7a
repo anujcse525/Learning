@@ -1,0 +1,22 @@
+package com.anuj.sorting;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class QuickSort {
+	private static final Scanner scanner = new Scanner(System.in);
+
+	public static void main(String[] args) {
+		int n = scanner.nextInt();
+
+		int[] a = new int[n];
+
+		for (int i = 0; i < n; i++) {
+			a[i] = scanner.nextInt();
+		}
+		System.out.println("Before Sorting: " + Arrays.toString(a));
+		quickSort(a);
+		System.out.println("After Sorting: " + Arrays.toString(a));
+		scanner.close();
+	}
+}

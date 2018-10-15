@@ -1,0 +1,9 @@
+package com.anuj.searching;
+
+public class FindRepeatedNumber {
+
+	public static void main(String[] args) {
+
+	}
+
+}

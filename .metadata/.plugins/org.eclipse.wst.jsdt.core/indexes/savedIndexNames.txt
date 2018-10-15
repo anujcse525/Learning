@@ -1,0 +1,7 @@
+INDEX VERSION 1.3+/Users/anujkumar/Desktop/learning/java/Learning/.metadata/.plugins/org.eclipse.wst.jsdt.core/indexes
+3155206963.index
+583199679.index
+3567873809.index
+3228176627.index
+2404615848.index
+389091552.index

@@ -1,0 +1,11 @@
+package com.citius;
+
+public class InheritenceCheck {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ChildClass cc = (ChildClass) new ParentClass();
+		ParentClass pc = new ChildClass();
+	}
+
+}

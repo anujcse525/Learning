@@ -1,0 +1,21 @@
+package spring.tutorial.SpringLearning;
+
+public class Test {
+	String message;
+
+	public Test() {
+		System.out.println("Test Constructor called...");
+	}
+
+	public void getMessage() {
+		System.out.println("Your message: " + message);
+	}
+
+	public void setMessage(String messa) {
+		this.message = message;
+	}
+
+	public void hello(String message) {
+		System.out.println("Hello Spring : " + message);
+	}
+}

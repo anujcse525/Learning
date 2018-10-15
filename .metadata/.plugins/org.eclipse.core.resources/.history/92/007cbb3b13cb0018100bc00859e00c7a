@@ -1,0 +1,79 @@
+package com.anuj.perfios;
+
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class DiceRoller {
+
+	private static final String ERROR_MESSAGE = "Input is not in correct format";
+	private static final String REGEX = "^\\d+D(4|6|8|10|12|20)$";
+	private static List<String> operands = new LinkedList<String>();
+	private static List<Character> operators = new LinkedList<Character>();
+
+	public static void main(String[] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		if (args.length < 3) {
+			System.out.println(
+					"Usage diceRoller <NumberOfDice>D<NumberOfSides> <Mathematical operator +/-> <NumberOfDice>D<NumberOfSides>");
+		}
+		// System.out.println(args[0] + " " + args[1]);
+		// String input = args[0];
+		while (true) {
+			String diceInput = scan.nextLine();
+			createOperandOperatorList(diceInput);
+			System.out.println(Arrays.toString(operands.toArray()));
+			System.out.println(Arrays.toString(operators.toArray()));
+		}
+
+	}
+
+	public static void createOperandOperatorList(String diceInput) {
+		StringBuilder sb = new StringBuilder();
+		char[] diceInputArr = diceInput.trim().toCharArray();
+		for (int i = 0; i < diceInputArr.length; i++) {
+			char ch = diceInputArr[i];
+			if (ch == '+' || ch == '-') {
+				if (sb.length() < 3) {
+					gotError();
+				}
+				operators.add(ch);
+				String operand = sb.toString().trim();
+				if (checkOperandFormat(operand)) {
+					operands.add(sb.toString());
+				} else {
+					gotError();
+				}
+				sb = new StringBuilder();
+			} else {
+				sb.append(ch);
+			}
+		}
+		if (sb.length() < 3) {
+			gotError();
+		} else {
+			operands.add(sb.toString());
+		}
+	}
+
+	public static boolean checkOperandFormat(String operand) {
+		Pattern pattern = Pattern.compile(REGEX);
+		Matcher matcher = pattern.matcher(operand);
+		return matcher.matches();
+	}
+
+	public static void generateRandomNumber() {
+
+	}
+
+	public static void gotError() {
+		System.out.println(ERROR_MESSAGE);
+		// return;
+	}
+
+}

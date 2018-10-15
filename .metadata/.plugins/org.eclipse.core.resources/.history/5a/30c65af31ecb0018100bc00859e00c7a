@@ -1,0 +1,5 @@
+package com.anuj.perfios;
+
+public class DiceNotValidException extends Exception{
+
+}

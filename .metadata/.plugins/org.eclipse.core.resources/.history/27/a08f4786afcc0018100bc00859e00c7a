@@ -1,0 +1,19 @@
+package com.anuj.hackerrank;
+
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+public class Matrix {
+
+	static int countDistinct(List<List<Integer>> matrix){
+		Set<Integer> set = new HashSet<Integer>();
+		
+		return 0;
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

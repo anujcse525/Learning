@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.anuj.hackerrank.MaxMul.java&apos; to &apos;MaxSum.java&apos;&#x0A;- Original project: &apos;Interviews&apos;&#x0A;- Original element: &apos;com.anuj.hackerrank.MaxMul.java&apos;&#x0A;- Renamed element: &apos;com.anuj.hackerrank.MaxSum.java&apos;" description="Rename compilation unit &apos;MaxMul.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.anuj.hackerrank{MaxMul.java" name="MaxSum.java" references="false" stamp="1536678506838" version="1.0"/>
+</session>

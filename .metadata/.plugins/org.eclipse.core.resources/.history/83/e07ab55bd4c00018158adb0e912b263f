@@ -1,0 +1,11 @@
+package com.citius;
+
+public class InheritenceCheck {
+
+	public static void main(String[] args) {
+		ChildClass cc = (ChildClass) new ParentClass("Ram");
+		ParentClass pc = new ChildClass("Luv");
+		System.out.println(cc.getParentName() + "  " + cc.childName);
+	}
+
+}

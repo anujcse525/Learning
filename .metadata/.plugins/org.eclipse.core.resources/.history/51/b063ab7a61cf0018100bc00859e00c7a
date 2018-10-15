@@ -1,0 +1,5 @@
+package com.anuj.inmemory;
+
+public interface Cache {
+
+}

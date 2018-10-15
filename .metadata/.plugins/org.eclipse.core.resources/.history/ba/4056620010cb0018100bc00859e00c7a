@@ -1,0 +1,79 @@
+package com.anuj.perfios;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
+import javax.script.ScriptException;
+
+public class DiceRoller {
+
+	public static final String ERROR_MESSAGE = "Input is not in correct format";
+
+	public static void main(String[] args) {
+
+		ScriptEngineManager mgr = new ScriptEngineManager();
+		ScriptEngine engine = mgr.getEngineByName("JavaScript");
+		List<String> operands = new LinkedList<String>();
+		List<Character> operators = new LinkedList<Character>();
+
+		Scanner scan = new Scanner(System.in);
+
+		if (args.length < 3) {
+			System.out.println(
+					"Usage diceRoller <NumberOfDice>D<NumberOfSides> <Mathematical operator +/-> <NumberOfDice>D<NumberOfSides>");
+		}
+		// System.out.println(args[0] + " " + args[1]);
+		// String input = args[0];
+		String diceInput = scan.nextLine();
+		StringBuilder sb = new StringBuilder();
+		for (char ch : diceInput.trim().toCharArray()) {
+
+			if (ch == '+' || ch == '-') {
+				if (sb.length() < 3) {
+					System.out.println(ERROR_MESSAGE);
+					return;
+				}
+				operators.add(ch);
+				String operand = sb.toString();
+				if (checkOperandFormat(operand)) {
+					operands.add(sb.toString());
+				} else {
+					System.out.println(ERROR_MESSAGE);
+				}
+				sb = new StringBuilder();
+			} else {
+				sb.append(ch);
+			}
+		}
+		/*
+		 * while (true) { String input = scan.nextLine().trim();
+		 * 
+		 * String[] inputs = input.split("[+-]");
+		 * 
+		 * if (inputs.length < 2) {
+		 * System.out.println("Input is not in correct format"); return; } for
+		 * (String in : inputs) { System.out.println(in); Matcher matcher =
+		 * pattern.matcher(in.trim()); if (!matcher.matches()) {
+		 * System.out.println("Input " + in + " is not in correct format");
+		 * return; }
+		 * 
+		 * }
+		 */
+
+	}
+
+	// }
+
+	public static boolean checkOperandFormat(String operand) {
+		String regex = "^\\d+D(4|6|8|10|12|20)$";
+		Pattern pattern = Pattern.compile(regex);
+		Matcher matcher = pattern.matcher(operand);
+		return matcher.matches();
+	}
+
+}

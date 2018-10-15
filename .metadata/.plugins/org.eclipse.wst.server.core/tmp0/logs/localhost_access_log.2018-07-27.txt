@@ -1,0 +1,1 @@
+0:0:0:0:0:0:0:1 - - [27/Jul/2018:19:48:05 +0530] "GET /restservices/webapi/myresource HTTP/1.1" 200 7

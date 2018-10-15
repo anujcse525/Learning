@@ -1,0 +1,42 @@
+package com.anuj.hackerrank;
+
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+/*5 5
+1 5 5 25 125*/
+public class FindGP {
+
+	static long countTriplets(List<Long> list, long r) {
+		long count = 0;
+		Map<Long, Long> map = new HashMap<Long, Long>();
+		for (Long l : list) {
+			if (map.containsKey(l)) {
+				map.put(l, map.get(l) + 1);
+			} else {
+				map.put(l, 1L);
+			}
+		}
+		return count;
+	}
+
+	public static void main(String[] args) throws IOException {
+		Scanner scan = new Scanner(System.in);
+		int items = scan.nextInt();
+		int gp = scan.nextInt();
+		List<Long> inputs = new ArrayList<Long>();
+
+		for (int i = 0; i < items; i++) {
+			inputs.add(scan.nextLong());
+		}
+
+		long result = countTriplets(inputs, gp);
+		System.out.println(result);
+		scan.close();
+	}
+
+}

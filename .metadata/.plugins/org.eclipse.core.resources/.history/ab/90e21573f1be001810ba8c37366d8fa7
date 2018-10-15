@@ -1,0 +1,23 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="car" class="spring.tutorial.arraytypespringdi.Car">
+		<property name="carCompany" value="Ferrari" />
+		<property name="engine">
+			<bean class="spring.tutorial.arraytypespringdi.Engine">
+				<property name="models">
+					<array>
+						<value>Ferrari2017</value>
+						<value>Ferrari2018 </value>
+					</array>
+				</property>
+			</bean>
+		</property>
+	</bean>
+
+
+</beans>

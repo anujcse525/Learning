@@ -1,0 +1,12 @@
+package com.anuj.perfios;
+
+public class DiceNotValidException extends Exception{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -633008321877331352L;
+	
+	
+
+}

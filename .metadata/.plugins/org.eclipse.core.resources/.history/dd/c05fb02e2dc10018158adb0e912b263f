@@ -1,0 +1,13 @@
+package com.accolite;
+
+public enum Color {
+	RED(20), GREEN(30), BLUE(40);
+	int num;
+	private Color(int abc) {
+		this.num = abc;
+	}
+	public static void main(String[] args) {
+		Color cl = Color.BLUE;
+		System.out.println(cl + ""+cl.num + Color.values());
+	}
+}

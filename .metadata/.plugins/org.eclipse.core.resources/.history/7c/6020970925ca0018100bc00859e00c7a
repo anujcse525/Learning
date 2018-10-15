@@ -1,0 +1,55 @@
+package com.anuj.hackerrank;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+/*5 5
+1 5 5 25 125*/
+public class FindGP {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+
+		int n = sc.nextInt();
+		int r = sc.nextInt();
+		List<Long> list = new ArrayList<Long>();
+		long[] input = new long[n];
+		for (int i = 0; i < n; i++) {
+			long data = sc.nextLong();
+			list.add(data);
+			input[i] = data;
+
+		}
+
+		System.out.println(countTriplets(list, r));
+		// System.out.println(solve(list, r));
+
+		sc.close();
+	}
+
+	static long countTriplets(List<Long> arr, long r) {
+		long cnt = 0;
+		Map<Long, Long> map = new HashMap<>();
+		Map<Long, Long> rMap = new HashMap<>();
+		for (long n : arr) {
+			if (n % r == 0) {
+				long pre = n / r;
+				Long cnt2 = rMap.get(pre);
+				if (cnt2 != null)
+					cnt += cnt2;
+
+				Long cnt1 = map.get(pre);
+				if (cnt1 != null)
+					rMap.put(n, rMap.getOrDefault(n, 0L) + cnt1);
+			}
+			map.put(n, map.getOrDefault(n, 0L) + 1);
+		}
+		return cnt;
+	}
+
+}
