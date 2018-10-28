@@ -1,0 +1,13 @@
+package com.anuj.threadcommu;
+
+public class PlaceToWrite {
+	private static String value;
+
+	public static String getValue() {
+		return value;
+	}
+
+	public static void setValue(String value) {
+		PlaceToWrite.value = value;
+	}
+}

@@ -1,0 +1,18 @@
+package com.anuj.threadcommu;
+
+public class Producer implements Runnable {
+
+	PlaceToWrite pw = null;
+	MyWaitNotify mwn = new MyWaitNotify();
+
+	public Producer(PlaceToWrite p, MonitorObject mo) {
+		this.pw = p;
+		this.mo = mo;
+	}
+
+	public void run() {
+		pw.setValue("Setting first value");
+mo.
+	}
+
+}

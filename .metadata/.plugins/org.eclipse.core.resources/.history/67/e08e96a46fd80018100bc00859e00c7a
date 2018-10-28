@@ -1,0 +1,12 @@
+package com.anuj.inmemory;
+
+public class StringTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String abd = "";
+		
+		System.out.println(abd.isEmpty());
+	}
+
+}

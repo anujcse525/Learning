@@ -1,0 +1,23 @@
+package com.anuj.threadcommu;
+
+public class Test {
+
+	public static void main(String[] args) {
+		PlaceToWrite pw = new PlaceToWrite();
+
+		Thread prod = new Thread(new Producer(pw));
+		Thread con = new Thread(new Consumer(pw));
+
+		prod.start();
+		con.start();
+
+		try {
+			prod.join();
+			con.join();
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+
+	}
+
+}

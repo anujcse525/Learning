@@ -1,0 +1,13 @@
+package com.anuj.java8feature;
+
+public class FindAnagramSet {
+
+	@FunctionalInterface
+	 Interface FindAnagram{
+		
+	}
+	public static void main(String[] args) {
+
+	}
+
+}

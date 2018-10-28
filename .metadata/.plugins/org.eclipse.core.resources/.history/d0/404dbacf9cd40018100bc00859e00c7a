@@ -1,0 +1,11 @@
+package com.anuj.threadlocal;
+
+public class MyRunnableChild extends MyRunnable {
+
+	private String childName;
+
+	public MyRunnableChild(String name) {
+		super(name);
+	}
+
+}

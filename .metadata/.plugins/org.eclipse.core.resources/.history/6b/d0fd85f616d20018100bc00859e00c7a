@@ -1,0 +1,36 @@
+package com.anuj.java8feature;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
+
+public class FindAnagramSet {
+
+	static class compStr implements Comparator<String>{
+
+		@Override
+		public int compare(String o1, String o2) {
+			return o1.compareTo(o2);
+		}
+		
+	}
+	public static void main(String[] args) {
+		FindAnagram findAna = (List<String> words) -> {
+			Set<Set<String>> result = new HashSet<Set<String>>();
+			
+			
+			return null;
+		};
+		
+	}
+	
+	public static List<String> sortStrings(List<String> words){
+		List<String> list = Arrays.sort(words);
+	}
+	
+	
+
+}

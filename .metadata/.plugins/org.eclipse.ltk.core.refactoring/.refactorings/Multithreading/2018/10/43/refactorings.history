@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;com.anuj.threadcommu.PlaceToWrite.value&apos; in &apos;com.anuj.threadcommu.PlaceToWrite&apos;&#x0A;- Original project: &apos;Multithreading&apos;&#x0A;- Original element: &apos;com.anuj.threadcommu.PlaceToWrite.value&apos;&#x0A;- Getter method name: &apos;getValue&apos;&#x0A;- Setter method name: &apos;setValue&apos;&#x0A;- Field visibility: &apos;public&apos;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;value&apos;" flags="589830" getter="getValue" id="org.eclipse.jdt.ui.self.encapsulate" input="/src\/main\/java&lt;com.anuj.threadcommu{PlaceToWrite.java[PlaceToWrite^value" insertion="-1" setter="setValue" stamp="1540089927272" version="1.0" visibility="1"/>
+</session>

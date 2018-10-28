@@ -1,0 +1,97 @@
+package com.anuj.inmemory;
+
+import java.util.LinkedList;
+import java.util.concurrent.ConcurrentHashMap;
+
+class DataNode {
+	String key;
+	String value;
+	DataNode prev;
+	DataNode next;
+
+	public DataNode(String key, String value) {
+		this.key = key;
+		this.value = value;
+		this.prev = null;
+		this.next = null;
+	}
+
+	@Override
+	public String toString() {
+		return "DataNode [key=" + key + ", value=" + value + ", prev=" + prev + ", next=" + next + "]";
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((key == null) ? 0 : key.hashCode());
+		result = prime * result + ((next == null) ? 0 : next.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		DataNode other = (DataNode) obj;
+		if (key == null) {
+			if (other.key != null)
+				return false;
+		} else if (!key.equals(other.key))
+			return false;
+		if (next == null) {
+			if (other.next != null)
+				return false;
+		} else if (!next.equals(other.next))
+			return false;
+		return true;
+	}
+
+}
+
+public class LRUCache {
+
+	static ConcurrentHashMap<String, DataNode> lruMap = new ConcurrentHashMap<String, DataNode>();
+	static LinkedList<DataNode> list = new LinkedList<DataNode>();
+	static DataNode front, rear;
+	static int MAX_LENGTH = 5;
+
+	public static void add(String key, String value) {
+		DataNode node = new DataNode(key, value);
+		if (front == null) {
+			
+			front = rear = node;
+			lruMap.put(key, node);
+			return;
+		}
+		if (lruMap.containsKey(key)) {
+			DataNode temp = lruMap.get(key);
+			deleteFromList(temp);
+			addInFront(node);
+			lruMap.put(key, node);
+			return;
+		}
+
+		if (list.size() > MAX_LENGTH) {
+			DataNode temp = rear.next;
+			temp.prev = null;
+			lruMap.remove(rear.key);
+			rear = temp;
+			addInFront(node);
+			lruMap.put(key, node);
+			return;
+		}
+
+		lruMa
+	}
+
+	public static void main(String[] args) {
+
+	}
+
+}

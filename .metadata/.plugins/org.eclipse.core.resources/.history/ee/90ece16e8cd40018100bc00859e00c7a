@@ -1,0 +1,11 @@
+package com.anuj.multithreading;
+
+public class CounterThread implements Runnable {
+
+	protected Counter counter = null;
+
+	public void run() {
+
+	}
+
+}

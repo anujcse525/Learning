@@ -1,0 +1,35 @@
+package com.anuj.inmemory;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+
+class compare implements Comparator{
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		
+		return ((String)o1).length() - ((String)o2).length();
+	}
+	
+}
+public class StringTest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String abd = "The lines are here to sort.";
+		abd.substring(0, abd.length()-2);
+		String[] abdArr = abd.split(" ");
+		List<String> list = Arrays.asList(abdArr);
+		Collections.sort(list, new compare());
+		for(String aa: list){
+			System.out.println(aa);
+		}
+		
+	}
+
+	
+
+}

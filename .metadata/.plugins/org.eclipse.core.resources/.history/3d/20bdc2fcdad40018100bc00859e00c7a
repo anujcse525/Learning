@@ -1,0 +1,5 @@
+package com.anuj.threadcommu;
+
+public class Consumer {
+
+}

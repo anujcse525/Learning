@@ -1,0 +1,22 @@
+package com.anuj.threadlocal;
+
+public class MyRunnable implements Runnable {
+
+	private String name;
+
+	public MyRunnable(String name) {
+		this.name = name;
+	}
+
+	private ThreadLocal<String> th = new ThreadLocal<String>();
+
+	public void run() {
+		th.set(name + " -- Anuj");
+		try {
+			Thread.sleep(10L * 1000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
+	}
+
+}

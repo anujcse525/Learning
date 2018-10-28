@@ -42,8 +42,8 @@ public class HeapSort {
 
 	/* Function to swap largest element in heap */
 	public static void maxheap(int arr[], int i) {
-		int left = 2 * i;
-		int right = 2 * i + 1;
+		int left = 2 * i + 1;
+		int right = 2 * i + 2;
 		int max = i;
 		if (left <= N && arr[left] > arr[i])
 			max = left;

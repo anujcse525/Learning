@@ -1,0 +1,17 @@
+package com.anuj.backtracking;
+
+public class NQueenProblem {
+
+	public static void main(String[] args) {
+
+	}
+
+	class Position {
+		int row, column;
+
+		public Position(int r, int c) {
+			this.row = r;
+			this.column = c;
+		}
+	}
+}

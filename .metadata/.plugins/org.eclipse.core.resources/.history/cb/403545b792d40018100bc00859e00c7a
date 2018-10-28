@@ -1,0 +1,19 @@
+package com.anuj.multithreading;
+
+public class CounterTest {
+
+	public static void main(String[] args) {
+		Counter counter = new Counter();
+		CounterThread ct1 = new CounterThread(counter);
+		CounterThread ct2 = new CounterThread(counter);
+
+		Thread th1 = new Thread(ct1);
+		th1.setName("TH1");
+		Thread th2 = new Thread(ct2);
+		th2.setName("TH2");
+
+		th1.start();
+		th2.start();
+	}
+
+}

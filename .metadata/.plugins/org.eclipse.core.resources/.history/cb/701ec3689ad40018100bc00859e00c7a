@@ -1,0 +1,11 @@
+package com.anuj.threadlocal;
+
+public class MyRunnable implements Runnable {
+
+	private ThreadLocal<String> th = new ThreadLocal<String>();
+	
+	public void run() {
+		
+	}
+
+}

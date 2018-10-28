@@ -1,0 +1,16 @@
+package com.anuj.threadcommu;
+
+public class Producer implements Runnable {
+
+	PlaceToWrite pw = null;
+
+	public Producer(PlaceToWrite p) {
+		this.pw = p;
+	}
+
+	public void run() {
+		MonitorObject mo = new MonitorObject();
+
+	}
+
+}

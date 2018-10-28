@@ -71,6 +71,7 @@ public class CountingConnections {
 
 	public static void main(String[] args) {
 		List<Integer> list1 = Arrays.asList(1, 0, 0, 1);
+		//System.out.println(list1.size());
 		List<Integer> list2 = Arrays.asList(0, 1, 1, 1);
 		List<Integer> list3 = Arrays.asList(1, 0, 0, 1);
 		List<List<Integer>> lists = Arrays.asList(list1, list2, list3);

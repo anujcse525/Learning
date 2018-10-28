@@ -1,0 +1,20 @@
+package com.anuj.threadcommu;
+
+public class Consumer implements Runnable {
+
+	MyWaitNotify mwn = new MyWaitNotify();
+	PlaceToWrite pw = null;
+
+	public Consumer(PlaceToWrite p) {
+		this.pw = p;
+	}
+
+	public void run() {
+
+		while (true) {
+			mwn.doWait();
+			System.out.println(pw.getValue());
+		}
+	}
+
+}

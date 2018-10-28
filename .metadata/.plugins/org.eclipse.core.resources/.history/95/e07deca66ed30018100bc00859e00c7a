@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<!-- No need to call any setter -->
+	<!-- <bean id="car" class="com.anuj.settermandatorycheck.Car" dependency-check="none"> 
+		</bean> -->
+
+	<!--Mandatory to call setter method of primitive data--> 
+	 <bean id="car" class="com.anuj.settermandatorycheck.Car" dependency-check="simple"> 
+		
+		<property name="carName" value="Ferrari"></property>
+		</bean> 
+
+	<!--  <bean id="car" class="com.anuj.settermandatorycheck.Car" dependency-check="objects"> 
+		 Mandatory to call setter method of secondary data  
+		</bean> -->
+
+	<!-- <bean id="car" class="com.anuj.settermandatorycheck.Car"
+		dependency-check="objects">
+		Mandatory to call setter method of all data
+	</bean> -->
+</beans>
