@@ -7,9 +7,13 @@
 
 	<bean
 		class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
-	<!-- To make primitive mandatory <bean id="student" class="com.anuj.setterMandatoryDIWithRequiredAnnotation.Student" 
-		dependency-check="simple"> <property name="name" value="Ram" /> <property 
-		name="roll" value="123" /> </bean> -->
+	<!-- To make primitive mandatory -->
+	<bean id="student"
+		class="com.anuj.setterMandatoryDIWithRequiredAnnotation.Student"
+		dependency-check="simple">
+		<property name="name" value="Ram" />
+		<property name="roll" value="123" />
+	</bean>
 
 	<!-- To make only objects mandatory <bean id="student" class="com.anuj.setterMandatoryDIWithRequiredAnnotation.Student" 
 		dependency-check="objects"> <property name="name" value="Ram" /> <property 
@@ -17,7 +21,7 @@
 		<property name="city" value = "Bangalore"/> <property name="state" value 
 		= "Karnataka"/> </bean> </property> </bean> -->
 
-	<bean id="student"
+	<!--  <bean id="student"
 		class="com.anuj.setterMandatoryDIWithRequiredAnnotation.Student">
 		<property name="name" value="Ram" />
 		<property name="roll" value="525" />
@@ -27,5 +31,5 @@
 				<property name="state" value="Karnataka" />
 			</bean>
 		</property>
-	</bean>
+	</bean>-->
 </beans>

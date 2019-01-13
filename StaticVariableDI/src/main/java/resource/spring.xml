@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="c" class="com.anuj.staticvariabledi.Car">
+
+	</bean>
+
+	<bean
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod" value="com.anuj.staticvariabledi.Car.setCarName" />
+		<property name="arguments" >
+			<list>
+				<value>AUDI</value>
+			</list>
+		</property>
+	</bean>
+</beans>

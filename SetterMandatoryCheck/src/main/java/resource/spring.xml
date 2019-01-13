@@ -5,24 +5,25 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 	<!-- No need to call any setter -->
-	<!-- <bean id="car" class="com.anuj.settermandatorycheck.Car" dependency-check="none"> 
-		</bean> -->
+<!-- 	<bean id="car" class="com.anuj.settermandatorycheck.Car" 
+ 		dependency-check="none"> 
+    	</bean> -->
 
 	<!--Mandatory to call setter method of primitive data -->
-	<!-- <bean id="car" class="com.anuj.settermandatorycheck.Car" dependency-check="simple"> 
+	 <!--  <bean id="car" class="com.anuj.settermandatorycheck.Car" dependency-check="simple"> 
 		<property name="carName" value="Ferrari"/> </bean> -->
 
 	<!-- Mandatory to call setter method of secondary data -->
-	<!-- <bean id="car" class="com.anuj.settermandatorycheck.Car" dependency-check="objects"> 
-		<property name="engine" ref="engine"/> </bean> -->
+	<!--  <bean id="car" class="com.anuj.settermandatorycheck.Car" dependency-check="objects"> 
+		<property name="engine" ref="engine"/> </bean>-->
 	<bean id="engine" class="com.anuj.settermandatorycheck.Engine">
 		<property name="modelYear" value="2018" />
 	</bean>
 
 	<!-- Mandatory to call setter method of all type of data -->
 	<bean id="car" class="com.anuj.settermandatorycheck.Car"
-		dependency-check="objects">
-		<property name="carName" value="Audi" />
+		dependency-check="all">
+		<property name="carName" value="Ferrari" />
 		<property name="engine" ref="engine" />
 	</bean>
 </beans>
