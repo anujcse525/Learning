@@ -30,7 +30,7 @@ public class Drawing {
 		   double y = a[i]/2.0;
 		   double rw = 0.5/N;
 		   double rh = a[i]/2.0;
-		   StdDraw.filledRectangle(x, y, rw, rh);
+		  // StdDraw.filledRectangle(x, y, rw, rh);
 		                                                                                                                                          array of random values
 		}
 	}

@@ -1,5 +1,8 @@
 package com.anuj.string;
 
+import java.util.HashSet;
+import java.util.TreeSet;
+
 public class InternTest {
 
 	public static void main(String[] args) {
@@ -14,7 +17,7 @@ public class InternTest {
         String s2 = "Test";
         String s3 = new String("Test");
          String s4 = s3.intern();
-        System.out.println(s1 == s2); //true
+        /*System.out.println(s1 == s2); //true
         System.out.println(s2 == s3); //false
         System.out.println(s3 == s4); //false
         System.out.println(s1 == s3); //false
@@ -24,6 +27,13 @@ public class InternTest {
         System.out.println(s3.equals(s4)); //true
         System.out.println(s1.equals(s4)); //true
         System.out.println(s1.equals(s3)); //true
+        */
+        TreeSet set = new TreeSet<String>();
+        
+        Number num = 8;
+        short d = 98;
+        int in = (int) num;
+        System.out.println(in);
 	}
 
 }
