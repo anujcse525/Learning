@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="NPrimeTable" project="AltimetrikTest" tests="3" started="3" failures="1" errors="0" ignored="0">
+  <testsuite name="com.altimetrik.nprime.NPrimeTable" time="0.015">
+    <testcase name="test" classname="com.altimetrik.nprime.NPrimeTable" time="0.0"/>
+    <testcase name="testNegativeTableSize" classname="com.altimetrik.nprime.NPrimeTable" time="0.0"/>
+    <testcase name="testForTenPrimeNumbers" classname="com.altimetrik.nprime.NPrimeTable" time="0.015">
+      <failure>
+        <expected>******************************************************
+***** Welcome to Prime numbers table generator *****
+******************************************************
+OK you want prime number table for 10 prime numbers.
+2      | 3      | 5      | 7      | 11     | 13     | 17     | 19     | 23     | 29     |     | 
+4      | 6      | 10     | 14     | 22     | 26     | 34     | 38     | 46     | 58     |     | 
+6      | 9      | 15     | 21     | 33     | 39     | 51     | 57     | 69     | 87     |     | 
+8      | 12     | 20     | 28     | 44     | 52     | 68     | 76     | 92     | 116    |     | 
+10     | 15     | 25     | 35     | 55     | 65     | 85     | 95     | 115    | 145    |     | 
+12     | 18     | 30     | 42     | 66     | 78     | 102    | 114    | 138    | 174    |     | 
+14     | 21     | 35     | 49     | 77     | 91     | 119    | 133    | 161    | 203    |     | 
+16     | 24     | 40     | 56     | 88     | 104    | 136    | 152    | 184    | 232    |     | 
+18     | 27     | 45     | 63     | 99     | 117    | 153    | 171    | 207    | 261    |     | 
+20     | 30     | 50     | 70     | 110    | 130    | 170    | 190    | 230    | 290    |     | </expected>
+        <actual>******************************************************
+***** Welcome to Prime numbers table generator *****
+******************************************************
+OK you want prime number table for 10 prime numbers.
+2      | 3      | 5      | 7      | 11     | 13     | 17     | 19     | 23     | 29     | 
+4      | 6      | 10     | 14     | 22     | 26     | 34     | 38     | 46     | 58     | 
+6      | 9      | 15     | 21     | 33     | 39     | 51     | 57     | 69     | 87     | 
+8      | 12     | 20     | 28     | 44     | 52     | 68     | 76     | 92     | 116    | 
+10     | 15     | 25     | 35     | 55     | 65     | 85     | 95     | 115    | 145    | 
+12     | 18     | 30     | 42     | 66     | 78     | 102    | 114    | 138    | 174    | 
+14     | 21     | 35     | 49     | 77     | 91     | 119    | 133    | 161    | 203    | 
+16     | 24     | 40     | 56     | 88     | 104    | 136    | 152    | 184    | 232    | 
+18     | 27     | 45     | 63     | 99     | 117    | 153    | 171    | 207    | 261    | 
+20     | 30     | 50     | 70     | 110    | 130    | 170    | 190    | 230    | 290    | </actual>org.junit.ComparisonFailure: expected:&lt;...| 23     | 29     | [    | 
+4      | 6      | 10     | 14     | 22     | 26     | 34     | 38     | 46     | 58     |     | 
+6      | 9      | 15     | 21     | 33     | 39     | 51     | 57     | 69     | 87     |     | 
+8      | 12     | 20     | 28     | 44     | 52     | 68     | 76     | 92     | 116    |     | 
+10     | 15     | 25     | 35     | 55     | 65     | 85     | 95     | 115    | 145    |     | 
+12     | 18     | 30     | 42     | 66     | 78     | 102    | 114    | 138    | 174    |     | 
+14     | 21     | 35     | 49     | 77     | 91     | 119    | 133    | 161    | 203    |     | 
+16     | 24     | 40     | 56     | 88     | 104    | 136    | 152    | 184    | 232    |     | 
+18     | 27     | 45     | 63     | 99     | 117    | 153    | 171    | 207    | 261    |     | 
+20     | 30     | 50     | 70     | 110    | 130    | 170    | 190    | 230    | 290    | ]    | &gt; but was:&lt;...| 23     | 29     | [
+4      | 6      | 10     | 14     | 22     | 26     | 34     | 38     | 46     | 58     | 
+6      | 9      | 15     | 21     | 33     | 39     | 51     | 57     | 69     | 87     | 
+8      | 12     | 20     | 28     | 44     | 52     | 68     | 76     | 92     | 116    | 
+10     | 15     | 25     | 35     | 55     | 65     | 85     | 95     | 115    | 145    | 
+12     | 18     | 30     | 42     | 66     | 78     | 102    | 114    | 138    | 174    | 
+14     | 21     | 35     | 49     | 77     | 91     | 119    | 133    | 161    | 203    | 
+16     | 24     | 40     | 56     | 88     | 104    | 136    | 152    | 184    | 232    | 
+18     | 27     | 45     | 63     | 99     | 117    | 153    | 171    | 207    | 261    | 
+20     | 30     | 50     | 70     | 110    | 130    | 170    | 190    | 230    | 290]    | &gt;
+	at org.junit.Assert.assertEquals(Assert.java:115)
+	at org.junit.Assert.assertEquals(Assert.java:144)
+	at com.altimetrik.nprime.NPrimeTable.testForTenPrimeNumbers(NPrimeTable.java:65)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+
+</failure>
+    </testcase>
+  </testsuite>
+</testrun>

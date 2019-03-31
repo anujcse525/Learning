@@ -1,8 +1,0 @@
-package com.anuj.propertiesdifile;
-
-import java.util.Properties;
-
-public class TestProperties {
-	private Properties properties;
-	
-}

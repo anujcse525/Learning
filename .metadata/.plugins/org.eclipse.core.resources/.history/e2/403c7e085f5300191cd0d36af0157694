@@ -1,0 +1,10 @@
+package com.altimetrik.nprime;
+
+public class NPrimeNumbersTable {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

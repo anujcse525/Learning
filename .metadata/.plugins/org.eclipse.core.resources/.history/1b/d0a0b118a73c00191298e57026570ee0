@@ -1,0 +1,33 @@
+package com.anuj.tree;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class InOrderTreeTraversal {
+
+	public static void main(String[] args) {
+		
+
+	}
+	
+	public List<TreeNode> recursiveTraversal(TreeNode root){
+		List<TreeNode> result = new ArrayList<TreeNode>();
+		
+		if(root == null){
+			return null;
+		}
+		
+		result.add(root);
+		recursiveTraversal(root.left);
+		recursiveTraversal(root.right);
+		
+		return result;
+	}
+
+	public void displayTree(List<TreeNode> list){
+		for(TreeNode temp : list){
+			System.out.print( temp.value + " > ");
+		}
+		System.out.println();
+	}
+}

@@ -1,0 +1,20 @@
+package com.anuj.tree;
+
+public class FindMaxInABinaryTree {
+
+	public int findMaxInBinaryTree(TreeNode root) {
+		int max = Integer.MIN_VALUE;
+		if (root == null) {
+			return 0;
+		}
+
+		int leftMax = findMaxInBinaryTree(root.left);
+		int rightMax = findMaxInBinaryTree(root.right);
+
+		max = leftMax > rightMax ? leftMax : rightMax;
+
+		max = max > root.value ? max : root.value;
+
+		return max;
+	}
+}

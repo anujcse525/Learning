@@ -4,6 +4,11 @@ public class TreeNode {
 	TreeNode left, right;
 	int value;
 
+	public TreeNode(int data) {
+		this.value = data;
+		this.right = this.left = null;
+	}
+
 	public TreeNode(TreeNode left, TreeNode right, int value) {
 		super();
 		this.left = left;
@@ -37,7 +42,7 @@ public class TreeNode {
 
 	@Override
 	public String toString() {
-		return "TreeNode [left=" + left + ", right=" + right + ", value=" + value + "]";
+		return value + " > " + left + " > " + right;
 	}
 
 }

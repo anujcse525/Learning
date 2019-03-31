@@ -1,0 +1,58 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf200
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fnil\fcharset0 Monaco;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh18000\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+N Prime Numbers Table\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+\
+Problem Statement:\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+Here, I need to create a table of first 10 Prime numbers.\
+Output needs to be like shown below:\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs22 \cf0 2      | 3      | 5      | 7      | 11     | 13     | 17     | 19     | 23     | 29     | \
+4      | 6      | 10     | 14     | 22     | 26     | 34     | 38     | 46     | 58     | \
+6      | 9      | 15     | 21     | 33     | 39     | 51     | 57     | 69     | 87     | \
+8      | 12     | 20     | 28     | 44     | 52     | 68     | 76     | 92     | 116    | \
+10     | 15     | 25     | 35     | 55     | 65     | 85     | 95     | 115    | 145    | \
+12     | 18     | 30     | 42     | 66     | 78     | 102    | 114    | 138    | 174    | \
+14     | 21     | 35     | 49     | 77     | 91     | 119    | 133    | 161    | 203    | \
+16     | 24     | 40     | 56     | 88     | 104    | 136    | 152    | 184    | 232    | \
+18     | 27     | 45     | 63     | 99     | 117    | 153    | 171    | 207    | 261    | \
+20     | 30     | 50     | 70     | 110    | 130    | 170    | 190    | 230    | 290    | \
+\
+Test Cases:\
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+1. Base case: Print a table of 1 prime number 2;\
+2. Regular Case: Print a table of 10 prime numbers.\
+3. Negative case: Print a table of -2 prime numbers.\
+\
+Solution:\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+I have followed TDD approach.\
+\
+Steps followed to develop:\
+\
+1. Created Maven project and wrote test cases.\
+2. Wrote test cases for above scenarios.\
+3. Decided to write 4 methods: One for a complete flow, second to generate an array of N (input given by user) prime numbers, third to generate table of prime numbers and fourth one to display table.\
+4. I have also written one run.sh shell script to run the project.\
+\
+Steps to run:\
+\
+1. run \'93mvn clean install\'94 to generate executable jar file. Jar file will be copied in target folder.\
+2. Goto resource folder and run \'93./run.sh <int input : number of prime numbers>\'94\
+\
+Troubleshooting:\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+1. While running run script, if getting permission error, run command \'93chmod 777 run.sh\'94.\
+
+\f1\fs22 \
+}

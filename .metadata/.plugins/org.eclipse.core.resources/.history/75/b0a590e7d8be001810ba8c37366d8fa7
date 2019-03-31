@@ -1,7 +1,0 @@
-package spring.tutorial.arraytypespringdi;
-
-public class Car {
-
-	String carCompany;
-	Engine engine;
-}

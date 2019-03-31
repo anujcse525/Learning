@@ -1,0 +1,13 @@
+package com.anuj.poly;
+
+public class RunTimePoly {
+
+	public static void main(String[] args) {
+		Car car = new Car("ABC");
+		car.performance();
+		car = new Audi("CDE");
+		car.performance();
+		System.out.println(car.model);
+	}
+
+}

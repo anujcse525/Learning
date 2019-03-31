@@ -1,9 +1,0 @@
-package com.anuj.threadlocal;
-
-public class MyRunnable implements Runnable {
-
-	public void run() {
-
-	}
-
-}

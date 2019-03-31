@@ -1,0 +1,17 @@
+package com.anuj.poly;
+
+public class Car {
+	private String model;
+
+	public String getModel() {
+		return model;
+	}
+
+	public void setModel(String model) {
+		this.model = model;
+	}
+	
+	public void performance(){
+		System.out.println("Car Performance");
+	}
+}

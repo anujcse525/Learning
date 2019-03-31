@@ -1,0 +1,31 @@
+package com.anuj.tree;
+
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+
+		int tests = scanner.nextInt();
+		scanner.nextLine();
+		for (int i = 0; i < tests; i++) {
+			String input = scanner.nextLine();
+
+			String[] inputs = input.split(" ");
+
+			int boardSize = Integer.parseInt(inputs[0]);
+
+			String position = inputs[1].substring(1, 4);
+
+			String[] rowCol = position.split(",");
+			int row = Integer.parseInt(rowCol[0]);
+			int col = Integer.parseInt(rowCol[1]);
+			
+			System.out.println(boardSize + " " + row + " " + col);
+		}
+
+		scanner.close();
+	}
+
+}

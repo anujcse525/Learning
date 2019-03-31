@@ -1,6 +1,0 @@
-package com.anuj.settermandatorycheck;
-
-public class Car {
-	String carName;
-	Engine engine;
-}

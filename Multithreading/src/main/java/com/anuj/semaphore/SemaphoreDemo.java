@@ -11,16 +11,16 @@ public class SemaphoreDemo {
 		// creating a Semaphore object
 		// with number of permits 1
 		Semaphore sem = new Semaphore(1);
-		BlockingQueue bq = new DelayQueue<Delayed>();
+		BlockingQueue<Delayed> bq = new DelayQueue<Delayed>();
 		// creating two threads with name A and B
 		// Note that thread A will increment the count
 		// and thread B will decrement the count
-		MyThread mt1 = new MyThread(sem, "A");
-		MyThread mt2 = new MyThread(sem, "B");
+		MyThread mt1 = new MyThread(sem, "B");
+		MyThread mt2 = new MyThread(sem, "A");
 
 		// stating threads A and B
-		mt1.start();
 		mt2.start();
+		mt1.start();
 
 		// waiting for threads A and B
 		mt1.join();

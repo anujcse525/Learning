@@ -1,7 +1,0 @@
-package com.citius;
-
-public class ChildClass extends ParentClass {
-	public ChildClass()  {
-		super("ABC");
-	}
-}

@@ -1,9 +1,0 @@
-package com.anuj.threadcommu;
-
-public class Consumer implements Runnable {
-
-	public void run() {
-
-	}
-
-}

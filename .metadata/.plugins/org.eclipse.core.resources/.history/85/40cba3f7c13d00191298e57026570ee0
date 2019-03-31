@@ -1,0 +1,67 @@
+package com.anuj.tree;
+
+import java.util.Scanner;
+
+public class Solution {
+
+	public static void main(String[] args) {
+		String regex = "^\\d\\s(\\d,\\d)";
+		Scanner scanner = new Scanner(System.in);
+
+		int tests = scanner.nextInt();
+		scanner.nextLine();
+
+		for (int i = 0; i < tests; i++) {
+			String input = scanner.nextLine();
+
+			if (input.matches(regex)) {
+				String[] inputs = input.split(" ");
+
+				int boardSize = Integer.parseInt(inputs[0]);
+
+				String position = inputs[1].substring(1, 4);
+
+				String[] rowCol = position.split(",");
+				int row = Integer.parseInt(rowCol[0]);
+				int col = Integer.parseInt(rowCol[1]);
+
+				if (row > boardSize || col > boardSize || row < 1 || col < 1) {
+
+				} else {
+					System.out.println((boardSize * boardSize) - availablePositions(boardSize, row, col));
+				}
+			}
+
+		}
+
+		scanner.close();
+	}
+
+	public static int availablePositions(int board, int row, int col) {
+		int availablePos = 0;
+		if (row == 1 || col == 1 || row == board || col == board) {
+			return (board - 1) * 3;
+		}
+
+		for (int i = row - 1, j = col - 1; i >= 1 && j >= 1; i--, j--) {
+			availablePos++;
+		}
+
+		for (int i = row + 1, j = col + 1; i <= board && j <= board; i++, j++) {
+			availablePos++;
+		}
+
+		for (int i = row + 1, j = col - 1; i <= board && j >= 1; i++, j--) {
+			availablePos++;
+		}
+
+		for (int i = row - 1, j = col + 1; i >= 1 && j <= board; i--, j++) {
+			availablePos++;
+		}
+
+		availablePos += (board - 1) * 2;
+
+		return availablePos;
+	}
+
+}

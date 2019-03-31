@@ -1,0 +1,67 @@
+package com.altimetrik.nprime;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class NPrimeNumbersTable {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("***** Welcome to N Prime numbers table generator *****\n");
+		System.out.print("For how many prime numbers you want a table : ");
+		int n = scan.nextInt();
+
+		System.out.println("OK you want prime number table for " + n + " prime numbers.");
+
+		scan.close();
+
+		int[] primeNums = primeNumbersGenerator(n);
+		for (int num : primeNums) {
+			System.out.println(num);
+		}
+		
+		int[][] table = createTable(primeNums);
+		
+		
+	}
+
+	public static int[] primeNumbersGenerator(int num) {
+		int[] primes = new int[num];
+		int count = 0;
+		int number = 2;
+		while (count < num) {
+			boolean isPrime = true;
+			for (int j = 2; j <= Math.sqrt(number); j++) {
+				if (number % j == 0) {
+					isPrime = false;
+					break;
+				}
+			}
+			if (isPrime) {
+				primes[count++] = number;
+			}
+			number++;
+		}
+
+		return primes;
+	}
+
+	public static int[][] createTable(int[] primeNumbers) {
+		int[][] table = new int[10][primeNumbers.length];
+		for (int i = 0; i <= 10; i++) {
+			for (int p = 0; p < primeNumbers.length-1; p++) {
+				table[i][p] = primeNumbers[p]*(i+1);
+			}
+		}
+		return table;
+	}
+	
+	public void diplayTable(int[][] table){
+		for(int[] arr : table){
+			for(int a : arr){
+				System.out.format("%3d\t",a);
+			}
+		}
+	}
+
+}

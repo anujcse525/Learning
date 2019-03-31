@@ -1,0 +1,9 @@
+package com.anuj.tree;
+
+public class FindMaxInABinaryTree {
+	public int findMaxInBinaryTree(TreeNode root){
+		
+		
+		return 0;
+	}
+}

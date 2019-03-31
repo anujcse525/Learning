@@ -1,0 +1,47 @@
+package com.anuj.tree;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class HeightOfATree {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		int t = scanner.nextInt();
+		while (t > 0) {
+			HashMap<Integer, TreeNode> nodeMap = new HashMap<Integer, TreeNode>();
+			int node1 = scanner.nextInt();
+			int node2 = scanner.nextInt();
+			char lr = scanner.next().charAt(0);
+
+			TreeNode parent = nodeMap.get(node1);
+			TreeNode root = null;
+
+			if (parent == null) {
+				parent = new TreeNode(node1);
+				nodeMap.put(node1, parent);
+				if (root == null) {
+					root = parent;
+				}
+			}
+
+			TreeNode child = new TreeNode(node2);
+
+			if (lr == 'L') {
+				parent.left = child;
+			} else
+				parent.right = child;
+
+			System.out.println(root);
+
+			System.out.println(getHeight(root));
+			
+			t--;
+		}
+	}
+
+	public static int getHeight(TreeNode root) {
+		return 0;
+	}
+
+}

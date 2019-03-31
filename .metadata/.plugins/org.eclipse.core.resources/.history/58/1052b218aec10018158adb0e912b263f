@@ -1,6 +1,0 @@
-package com.anuj.settermandatorydi;
-
-public class Student {
-	private String name;
-	
-}

@@ -1,6 +1,0 @@
-package com.anuj.tree;
-
-public class TreeNode {
-	TreeNode left, right;
-	int value;
-}

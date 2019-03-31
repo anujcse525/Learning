@@ -32,14 +32,14 @@ public class Program {
 		Session session = HibernateUtilities.getSessionFactory().openSession();
 		session.beginTransaction();
 
-		User joe = createUser("Joe", 500, 50, "Good Job", "You Made It!");
+		User2 joe = createUser2("Joe", 500, 50, "Good Job", "You Made It!");
 		session.save(joe);
 
-		User bob = createUser("Bob", 300, 20, "Taco Time!");
+		/*User bob = createUser("Bob", 300, 20, "Taco Time!");
 		session.save(bob);
 
 		User amy = createUser("Amy", 250, 220, "Yes!!!");
-		session.save(amy);
+		session.save(amy);*/
 
 		session.getTransaction().commit();
 		session.close();
@@ -60,5 +60,18 @@ public class Program {
 
 		return user;
 	}
+	private static User2 createUser2(String name, int goal, int total, String... alerts) {
+		User2 user = new User2();
+		user.setName(name);
+		user.getProteinData().setGoal(goal);
+		user.getProteinData().setTotal(total);
+		user.addHistory(new UserHistory(new Date(System.currentTimeMillis()), "Set the goal to " + goal));
+		user.addHistory(new UserHistory(new Date(System.currentTimeMillis()), "Set the total to " + total));
 
+		for (String str : alerts) {
+			user.getGoalAlerts().add(new GoalAlert(str));
+		}
+
+		return user;
+	}
 }

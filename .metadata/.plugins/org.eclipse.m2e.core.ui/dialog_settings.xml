@@ -4,10 +4,12 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="com.sapient"/>
 		</list>
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="maven_learn"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
@@ -104,17 +106,10 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
-			<item value="com.anuj.settermandatorydi"/>
-			<item value="com.anuj.propertiesdifile"/>
-			<item value="com.anuj.propertiesdi"/>
 		</list>
 		<list key="groupId">
-			<item value="com.anuj"/>
 		</list>
 		<list key="artifactId">
-			<item value="SetterMandatoryDI"/>
-			<item value="PropertiesDI_File"/>
-			<item value="PropertiesDI"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

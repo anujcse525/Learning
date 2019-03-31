@@ -1,0 +1,18 @@
+package com.altimetrik.nprime;
+
+import java.util.Scanner;
+
+public class NPrimeNumbersTable {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("***** Welcome to N Prime numbers table generator *****\n");
+		System.out.print("For how many prime numbers you want a table : ");
+		int n = scan.nextInt();
+		
+		System.out.println("OK you want prime number table for " + n + " prime numbers.");
+
+		scan.close();
+	}
+
+}

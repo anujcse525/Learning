@@ -1,0 +1,25 @@
+package com.anuj.tree;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class LevelOrderTraversal {
+
+	public List<Integer> levelOrderTraversal(TreeNode root){
+		List<Integer> result = new ArrayList<Integer>();
+		
+		Queue<TreeNode> queue = new LinkedList<TreeNode>();
+		
+		queue.offer(root);
+		
+		queue.offer(null);
+		
+		while(!queue.isEmpty()){
+			
+		}
+		
+		return result;
+	}
+}
